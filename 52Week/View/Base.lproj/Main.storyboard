@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QgX-Hu-1r5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CxH-fN-j28">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,22 +13,13 @@
         <!--52 Week-->
         <scene sceneID="rm8-8y-ktr">
             <objects>
-                <tableViewController id="V8p-By-RMG" sceneMemberID="viewController">
+                <tableViewController id="V8p-By-RMG" customClass="StockTableVC" customModule="_2Week" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ITM-we-obt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <tabBar key="tableFooterView" contentMode="scaleToFill" id="TXO-ks-2at">
-                            <rect key="frame" x="0.0" y="244" width="375" height="49"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <items>
-                                <tabBarItem systemItem="favorites" id="p2u-Lk-7pV"/>
-                                <tabBarItem systemItem="more" id="4lE-ZQ-KHa"/>
-                            </items>
-                        </tabBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StockCell" rowHeight="216" id="0sN-qM-pcW">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StockCell" rowHeight="216" id="0sN-qM-pcW" customClass="StockCell" customModule="_2Week" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="216"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0sN-qM-pcW" id="wQG-mj-NBW">
@@ -73,9 +64,14 @@
                                                 </slider>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Gqa-KN-5XW" firstAttribute="leading" secondItem="3Eo-ch-ySO" secondAttribute="leadingMargin" id="2Uv-lJ-37n"/>
-                                                <constraint firstItem="Gqa-KN-5XW" firstAttribute="top" secondItem="3Eo-ch-ySO" secondAttribute="topMargin" id="6u4-hQ-PCH"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Gqa-KN-5XW" secondAttribute="trailing" id="Dp7-bl-qut"/>
+                                                <constraint firstItem="22o-HQ-d42" firstAttribute="leading" secondItem="3Eo-ch-ySO" secondAttribute="leading" id="3FI-fH-jJE"/>
+                                                <constraint firstAttribute="trailing" secondItem="22o-HQ-d42" secondAttribute="trailing" id="H77-um-2E2"/>
+                                                <constraint firstItem="Gqa-KN-5XW" firstAttribute="top" secondItem="3Eo-ch-ySO" secondAttribute="topMargin" id="ILH-Hc-BRQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="22o-HQ-d42" secondAttribute="bottom" id="PJE-Eb-kor"/>
+                                                <constraint firstItem="22o-HQ-d42" firstAttribute="top" secondItem="Gqa-KN-5XW" secondAttribute="bottom" constant="8" id="aeh-zl-kjy"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Gqa-KN-5XW" secondAttribute="trailing" id="fES-Ku-WuY"/>
+                                                <constraint firstItem="Gqa-KN-5XW" firstAttribute="leading" secondItem="3Eo-ch-ySO" secondAttribute="leadingMargin" id="nxq-TG-4c3"/>
+                                                <constraint firstItem="22o-HQ-d42" firstAttribute="top" secondItem="Gqa-KN-5XW" secondAttribute="bottom" constant="8" id="qpo-HO-rr1"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>
@@ -86,6 +82,12 @@
                                         <constraint firstItem="3Eo-ch-ySO" firstAttribute="leading" secondItem="wQG-mj-NBW" secondAttribute="leadingMargin" id="RMV-Yf-8Fw"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="stockNameLabel" destination="jeS-xo-wf7" id="N3J-NZ-ZTA"/>
+                                    <outlet property="stockPrice" destination="jQp-RZ-vNZ" id="FEI-8i-PaO"/>
+                                    <outlet property="stockSlider" destination="22o-HQ-d42" id="5Qf-Rc-p7f"/>
+                                    <outlet property="tickerSymbolLabel" destination="Cx9-Zt-6HU" id="x38-2S-gpg"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -97,12 +99,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LN9-gu-PYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="232.80000000000001" y="-63.418290854572717"/>
+            <point key="canvasLocation" x="572" y="-63.418290854572717"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="Z1t-dC-yAJ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MUq-bm-h1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QgX-Hu-1r5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="dYL-dd-tgl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="2nQ-D8-968">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -113,9 +117,25 @@
                         <segue destination="V8p-By-RMG" kind="relationship" relationship="rootViewController" id="lR8-e8-LJx"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MUq-bm-h1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-628" y="-63"/>
+            <point key="canvasLocation" x="-288.80000000000001" y="-63.418290854572717"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ylQ-bK-LLT">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CxH-fN-j28" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pcG-dG-Xfk">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="QgX-Hu-1r5" kind="relationship" relationship="viewControllers" id="DVc-IJ-DhB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nmh-W3-t8y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1234" y="-63"/>
         </scene>
     </scenes>
 </document>

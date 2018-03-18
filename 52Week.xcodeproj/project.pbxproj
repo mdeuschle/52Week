@@ -13,6 +13,8 @@
 		A89449E1205E148500D25026 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A89449DF205E148500D25026 /* LaunchScreen.storyboard */; };
 		A89449EC205E148500D25026 /* _2WeekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89449EB205E148500D25026 /* _2WeekTests.swift */; };
 		A89449F7205E148500D25026 /* _2WeekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89449F6205E148500D25026 /* _2WeekUITests.swift */; };
+		A8944A08205E1C9600D25026 /* StockTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8944A07205E1C9600D25026 /* StockTableVC.swift */; };
+		A8944A0A205E1EAB00D25026 /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8944A09205E1EAB00D25026 /* StockCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		A89449F2205E148500D25026 /* 52WeekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 52WeekUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A89449F6205E148500D25026 /* _2WeekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _2WeekUITests.swift; sourceTree = "<group>"; };
 		A89449F8205E148500D25026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8944A07205E1C9600D25026 /* StockTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableVC.swift; sourceTree = "<group>"; };
+		A8944A09205E1EAB00D25026 /* StockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +103,6 @@
 				A8944A05205E174500D25026 /* View */,
 				A8944A04205E173B00D25026 /* Controller */,
 				A89449D6205E148500D25026 /* AppDelegate.swift */,
-				A89449DA205E148500D25026 /* Main.storyboard */,
 				A89449DD205E148500D25026 /* Assets.xcassets */,
 				A89449DF205E148500D25026 /* LaunchScreen.storyboard */,
 				A89449E2205E148500D25026 /* Info.plist */,
@@ -128,6 +131,7 @@
 		A8944A04205E173B00D25026 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A8944A07205E1C9600D25026 /* StockTableVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -135,6 +139,8 @@
 		A8944A05205E174500D25026 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A89449DA205E148500D25026 /* Main.storyboard */,
+				A8944A09205E1EAB00D25026 /* StockCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,7 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8944A08205E1C9600D25026 /* StockTableVC.swift in Sources */,
 				A89449D7205E148500D25026 /* AppDelegate.swift in Sources */,
+				A8944A0A205E1EAB00D25026 /* StockCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,18 @@ class StockTableVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        WebService.dataTask(with: .fiftyTwoWeek) { response in
+            DispatchQueue.main.async {
+                switch response {
+                case let .success(data):
+                    if let object = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] {
+                        print(object)
+                    }
+                case let .failure(error):
+                    print(error)
+                }
+            }
+        }
     }
 
     // MARK: - Table view data source

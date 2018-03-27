@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A85AECC62069E45100B0C6E8 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85AECC52069E45100B0C6E8 /* WebService.swift */; };
+		A85AECCA2069E5FB00B0C6E8 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85AECC92069E5FB00B0C6E8 /* DataSource.swift */; };
+		A85AECCC2069E64F00B0C6E8 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85AECCB2069E64F00B0C6E8 /* EndPoint.swift */; };
+		A85AECCE2069E6CA00B0C6E8 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85AECCD2069E6CA00B0C6E8 /* Response.swift */; };
 		A89449D7205E148500D25026 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89449D6205E148500D25026 /* AppDelegate.swift */; };
 		A89449DC205E148500D25026 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A89449DA205E148500D25026 /* Main.storyboard */; };
 		A89449DE205E148500D25026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A89449DD205E148500D25026 /* Assets.xcassets */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A85AECC52069E45100B0C6E8 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		A85AECC92069E5FB00B0C6E8 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		A85AECCB2069E64F00B0C6E8 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		A85AECCD2069E6CA00B0C6E8 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		A89449D3205E148500D25026 /* 52Week.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 52Week.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A89449D6205E148500D25026 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A89449DB205E148500D25026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +84,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A85AECC42069E3FC00B0C6E8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A85AECC82069E5DE00B0C6E8 /* Protocols */,
+				A85AECC72069E5D200B0C6E8 /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A85AECC72069E5D200B0C6E8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A85AECC52069E45100B0C6E8 /* WebService.swift */,
+				A85AECCB2069E64F00B0C6E8 /* EndPoint.swift */,
+				A85AECCD2069E6CA00B0C6E8 /* Response.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A85AECC82069E5DE00B0C6E8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A85AECC92069E5FB00B0C6E8 /* DataSource.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		A89449CA205E148500D25026 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +134,7 @@
 		A89449D5205E148500D25026 /* 52Week */ = {
 			isa = PBXGroup;
 			children = (
+				A85AECC42069E3FC00B0C6E8 /* Networking */,
 				A8944A06205E174A00D25026 /* Model */,
 				A8944A05205E174500D25026 /* View */,
 				A8944A04205E173B00D25026 /* Controller */,
@@ -286,9 +322,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A85AECCC2069E64F00B0C6E8 /* EndPoint.swift in Sources */,
 				A8944A08205E1C9600D25026 /* StockTableVC.swift in Sources */,
 				A89449D7205E148500D25026 /* AppDelegate.swift in Sources */,
+				A85AECC62069E45100B0C6E8 /* WebService.swift in Sources */,
+				A85AECCA2069E5FB00B0C6E8 /* DataSource.swift in Sources */,
 				A8944A0A205E1EAB00D25026 /* StockCell.swift in Sources */,
+				A85AECCE2069E6CA00B0C6E8 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
